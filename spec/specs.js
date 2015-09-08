@@ -7,8 +7,8 @@ describe("cryptosquare", function() {
   //   expect(cryptosquare("a dog eats")).to.equal(8);
   // });
 
-  it("returns the number of columns of the cryptosquare", function() {
-    expect(cryptosquare("a dog eats")).to.equal(3);
+  it("returns a given sentence as a cryptosquare", function() {
+    expect(cryptosquare("don't compare yourself to others, compare yourself to the person you were yesterday")).to.eql("drfcu hotoe toreu enyom spwrt oopee edcut alrra orhrf seyms eetoy peryo neals otys");
   });
 
 });
