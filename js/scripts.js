@@ -1,13 +1,11 @@
 var cryptosquare = function(sentence) {
-  var letters = sentence.split(' ');
-  letters = letters.join('');
-  letters = letters.replace(/[.,-\/#!$%\^&\*;:{}=\-_'`~()]/g,"");
-  var length = letters.length;
+  sentence = sentence.replace(/[\s.,-\/#!$%\^&\*;:{}=\-_'`~()]/g,"");
+  var length = sentence.length;
   var columns = Math.ceil(Math.sqrt(length));
   var arr = [];
   for (var j = 0; j < columns; j += 1) {
     for (var i = 0; i < columns; i += 1) {
-      arr.push(letters.charAt(j + i*columns))
+      arr.push(sentence.charAt(j + i*columns))
     };
   };
   arr = arr.join("");
